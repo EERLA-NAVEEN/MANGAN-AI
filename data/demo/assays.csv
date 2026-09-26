@@ -1,0 +1,209 @@
+hole_id,depth_from_m,depth_to_m,mn_percent,fe_percent,sio2_percent,lithology
+DH-NB-001,0.0,21.1,3.98,12.19,56.64,Surface Alluvium / Lateritic Soil
+DH-NB-001,21.1,54.5,12.75,6.75,44.28,Mansar Schist Host Rock
+DH-NB-001,54.5,67.7,27.27,6.84,20.4,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-001,67.7,117.4,4.94,7.94,47.07,Footwall Dolomitic Marble
+DH-NB-002,0.0,17.0,2.92,13.45,62.26,Surface Alluvium / Lateritic Soil
+DH-NB-002,17.0,47.7,12.26,7.82,42.82,Mansar Schist Host Rock
+DH-NB-002,47.7,62.0,31.6,7.06,21.73,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-002,62.0,97.9,4.6,7.51,52.89,Footwall Dolomitic Marble
+DH-NB-003,0.0,18.2,4.36,13.01,73.06,Surface Alluvium / Lateritic Soil
+DH-NB-003,18.2,59.5,11.9,7.01,43.18,Mansar Schist Host Rock
+DH-NB-003,59.5,65.7,29.24,6.02,17.25,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-003,65.7,184.4,8.84,8.19,48.23,Footwall Dolomitic Marble
+DH-NB-004,0.0,19.2,3.07,11.43,72.06,Surface Alluvium / Lateritic Soil
+DH-NB-004,19.2,60.3,9.12,8.86,44.1,Mansar Schist Host Rock
+DH-NB-004,60.3,69.8,36.53,5.96,15.55,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-004,69.8,124.3,4.51,7.43,60.39,Footwall Dolomitic Marble
+DH-NB-005,0.0,8.1,4.31,11.77,61.44,Surface Alluvium / Lateritic Soil
+DH-NB-005,8.1,38.0,8.08,6.94,39.93,Mansar Schist Host Rock
+DH-NB-005,38.0,51.3,37.75,6.09,17.9,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-005,51.3,170.6,4.79,5.12,45.75,Footwall Dolomitic Marble
+DH-NB-006,0.0,19.1,2.8,10.72,65.26,Surface Alluvium / Lateritic Soil
+DH-NB-006,19.1,58.4,10.32,6.49,45.78,Mansar Schist Host Rock
+DH-NB-006,58.4,68.3,40.65,6.44,16.94,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-006,68.3,120.2,6.72,6.9,59.8,Footwall Dolomitic Marble
+DH-NB-007,0.0,20.2,2.8,10.48,70.28,Surface Alluvium / Lateritic Soil
+DH-NB-007,20.2,56.9,8.6,9.57,38.43,Mansar Schist Host Rock
+DH-NB-007,56.9,71.9,43.97,7.36,12.54,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-007,71.9,154.5,6.58,6.5,51.61,Footwall Dolomitic Marble
+DH-NB-008,0.0,9.5,3.34,12.43,70.35,Surface Alluvium / Lateritic Soil
+DH-NB-008,9.5,52.6,11.48,9.81,50.12,Mansar Schist Host Rock
+DH-NB-008,52.6,62.2,25.59,5.81,16.02,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-008,62.2,135.5,6.45,7.04,60.0,Footwall Dolomitic Marble
+DH-NB-009,0.0,12.3,4.41,8.71,74.17,Surface Alluvium / Lateritic Soil
+DH-NB-009,12.3,39.1,9.96,6.19,47.87,Mansar Schist Host Rock
+DH-NB-009,39.1,55.3,28.34,7.29,17.9,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-009,55.3,171.5,6.78,7.96,50.94,Footwall Dolomitic Marble
+DH-NB-010,0.0,21.7,4.21,8.76,71.47,Surface Alluvium / Lateritic Soil
+DH-NB-010,21.7,54.9,16.42,7.89,45.75,Mansar Schist Host Rock
+DH-NB-010,54.9,67.3,27.22,4.73,20.96,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-010,67.3,175.6,7.82,5.49,60.54,Footwall Dolomitic Marble
+DH-NB-011,0.0,20.0,3.6,11.29,67.19,Surface Alluvium / Lateritic Soil
+DH-NB-011,20.0,46.8,12.03,6.77,40.92,Mansar Schist Host Rock
+DH-NB-011,46.8,60.7,45.57,5.71,14.08,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-011,60.7,114.1,6.89,8.05,59.97,Footwall Dolomitic Marble
+DH-NB-012,0.0,10.0,2.54,10.34,65.23,Surface Alluvium / Lateritic Soil
+DH-NB-012,10.0,53.6,15.43,6.54,40.42,Mansar Schist Host Rock
+DH-NB-012,53.6,63.9,39.05,6.34,21.03,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-012,63.9,161.4,8.77,7.29,61.76,Footwall Dolomitic Marble
+DH-NB-013,0.0,15.8,3.73,9.32,62.37,Surface Alluvium / Lateritic Soil
+DH-NB-013,15.8,48.1,16.16,7.78,48.57,Mansar Schist Host Rock
+DH-NB-013,48.1,63.1,38.79,6.22,20.94,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-013,63.1,139.8,5.85,8.31,49.29,Footwall Dolomitic Marble
+DH-NB-014,0.0,21.9,3.54,13.62,71.54,Surface Alluvium / Lateritic Soil
+DH-NB-014,21.9,63.8,12.84,7.53,51.08,Mansar Schist Host Rock
+DH-NB-014,63.8,75.0,41.66,5.84,17.65,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-014,75.0,170.5,5.82,5.17,62.64,Footwall Dolomitic Marble
+DH-NB-015,0.0,8.0,2.24,12.23,56.98,Surface Alluvium / Lateritic Soil
+DH-NB-015,8.0,51.2,9.83,6.82,40.54,Mansar Schist Host Rock
+DH-NB-015,51.2,57.4,31.72,7.13,18.14,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-015,57.4,103.2,4.13,6.0,54.52,Footwall Dolomitic Marble
+DH-NB-016,0.0,14.2,2.39,10.74,56.42,Surface Alluvium / Lateritic Soil
+DH-NB-016,14.2,55.2,10.07,8.9,38.96,Mansar Schist Host Rock
+DH-NB-016,55.2,72.7,25.93,7.15,20.09,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-016,72.7,159.5,8.81,6.67,59.55,Footwall Dolomitic Marble
+DH-NB-017,0.0,10.3,4.45,8.58,66.78,Surface Alluvium / Lateritic Soil
+DH-NB-017,10.3,47.8,12.57,8.65,39.63,Mansar Schist Host Rock
+DH-NB-017,47.8,60.5,26.87,7.32,19.62,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-017,60.5,132.1,8.84,5.13,50.7,Footwall Dolomitic Marble
+DH-NB-018,0.0,17.5,2.19,11.05,72.76,Surface Alluvium / Lateritic Soil
+DH-NB-018,17.5,56.4,11.35,7.49,44.38,Mansar Schist Host Rock
+DH-NB-018,56.4,64.5,42.66,5.59,20.52,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-018,64.5,113.0,7.54,7.14,52.28,Footwall Dolomitic Marble
+DH-NB-019,0.0,11.1,2.09,8.99,70.54,Surface Alluvium / Lateritic Soil
+DH-NB-019,11.1,40.7,12.48,7.81,46.11,Mansar Schist Host Rock
+DH-NB-019,40.7,57.2,45.11,5.85,12.15,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-019,57.2,136.2,5.56,7.12,56.16,Footwall Dolomitic Marble
+DH-NB-020,0.0,10.6,3.75,10.03,69.2,Surface Alluvium / Lateritic Soil
+DH-NB-020,10.6,36.6,11.47,8.82,41.18,Mansar Schist Host Rock
+DH-NB-020,36.6,52.1,42.62,6.26,15.54,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-020,52.1,151.4,5.89,7.09,54.45,Footwall Dolomitic Marble
+DH-NB-021,0.0,11.0,1.52,9.81,69.98,Surface Alluvium / Lateritic Soil
+DH-NB-021,11.0,51.9,9.72,9.84,45.03,Mansar Schist Host Rock
+DH-NB-021,51.9,68.9,43.42,6.67,12.85,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-021,68.9,109.2,4.32,5.03,59.32,Footwall Dolomitic Marble
+DH-NB-022,0.0,19.5,1.89,9.04,61.82,Surface Alluvium / Lateritic Soil
+DH-NB-022,19.5,52.7,10.96,9.05,39.36,Mansar Schist Host Rock
+DH-NB-022,52.7,62.9,32.37,4.7,21.42,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-022,62.9,122.2,8.92,5.31,50.83,Footwall Dolomitic Marble
+DH-NB-023,0.0,17.0,3.77,8.71,71.66,Surface Alluvium / Lateritic Soil
+DH-NB-023,17.0,56.1,12.91,9.56,47.8,Mansar Schist Host Rock
+DH-NB-023,56.1,64.5,28.3,5.98,12.55,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-023,64.5,146.6,8.73,5.45,58.95,Footwall Dolomitic Marble
+DH-NB-024,0.0,19.9,3.07,9.37,57.43,Surface Alluvium / Lateritic Soil
+DH-NB-024,19.9,52.2,10.17,8.03,51.53,Mansar Schist Host Rock
+DH-NB-024,52.2,65.1,32.9,6.45,16.75,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-024,65.1,177.9,8.13,6.65,62.37,Footwall Dolomitic Marble
+DH-NB-025,0.0,16.2,4.17,13.63,56.07,Surface Alluvium / Lateritic Soil
+DH-NB-025,16.2,51.2,11.19,8.5,49.11,Mansar Schist Host Rock
+DH-NB-025,51.2,60.6,29.57,6.63,13.34,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-025,60.6,171.3,7.88,7.12,63.99,Footwall Dolomitic Marble
+DH-NB-026,0.0,9.2,4.41,8.23,70.07,Surface Alluvium / Lateritic Soil
+DH-NB-026,9.2,44.7,11.13,6.26,46.71,Mansar Schist Host Rock
+DH-NB-026,44.7,57.7,26.81,7.23,15.04,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-026,57.7,138.1,5.7,6.9,47.0,Footwall Dolomitic Marble
+DH-NB-027,0.0,13.4,3.3,11.08,68.89,Surface Alluvium / Lateritic Soil
+DH-NB-027,13.4,39.5,10.42,9.28,39.12,Mansar Schist Host Rock
+DH-NB-027,39.5,55.8,24.92,7.0,15.61,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-027,55.8,97.7,6.67,5.54,46.32,Footwall Dolomitic Marble
+DH-NB-028,0.0,15.2,3.27,12.74,68.12,Surface Alluvium / Lateritic Soil
+DH-NB-028,15.2,52.4,11.5,7.9,43.8,Mansar Schist Host Rock
+DH-NB-028,52.4,68.5,26.3,4.52,18.51,Manganese Ore Horizon (Pyrolusite/Braunite)
+DH-NB-028,68.5,119.7,4.21,8.12,62.18,Footwall Dolomitic Marble
+DH-SP-001,0.0,18.0,3.83,8.37,66.6,Overburden Laterite
+DH-SP-001,18.0,35.0,34.54,5.97,15.25,Manganese Ore Horizon (Braunite)
+DH-SP-001,35.0,114.7,6.38,4.86,57.52,Footwall Quartzite
+DH-SP-002,0.0,18.0,4.59,8.86,60.51,Overburden Laterite
+DH-SP-002,18.0,35.0,36.53,6.3,16.92,Manganese Ore Horizon (Braunite)
+DH-SP-002,35.0,141.1,7.07,4.79,45.39,Footwall Quartzite
+DH-SP-003,0.0,18.0,2.93,8.6,62.07,Overburden Laterite
+DH-SP-003,18.0,35.0,35.48,5.17,24.29,Manganese Ore Horizon (Braunite)
+DH-SP-003,35.0,126.3,4.0,8.0,47.57,Footwall Quartzite
+DH-SP-004,0.0,18.0,4.62,11.29,62.84,Overburden Laterite
+DH-SP-004,18.0,35.0,35.73,6.67,23.53,Manganese Ore Horizon (Braunite)
+DH-SP-004,35.0,85.7,4.42,6.09,52.28,Footwall Quartzite
+DH-SP-005,0.0,18.0,2.45,9.88,65.89,Overburden Laterite
+DH-SP-005,18.0,35.0,30.14,6.17,24.47,Manganese Ore Horizon (Braunite)
+DH-SP-005,35.0,91.6,4.11,6.67,56.1,Footwall Quartzite
+DH-SP-006,0.0,18.0,3.37,9.85,66.31,Overburden Laterite
+DH-SP-006,18.0,35.0,34.51,7.64,18.57,Manganese Ore Horizon (Braunite)
+DH-SP-006,35.0,131.6,4.35,4.86,45.57,Footwall Quartzite
+DH-SP-007,0.0,18.0,3.98,10.07,68.19,Overburden Laterite
+DH-SP-007,18.0,35.0,33.28,7.61,18.59,Manganese Ore Horizon (Braunite)
+DH-SP-007,35.0,127.5,7.17,6.79,48.86,Footwall Quartzite
+DH-SP-008,0.0,18.0,3.77,8.57,58.63,Overburden Laterite
+DH-SP-008,18.0,35.0,38.44,6.92,23.77,Manganese Ore Horizon (Braunite)
+DH-SP-008,35.0,89.7,6.04,5.43,52.69,Footwall Quartzite
+DH-SP-009,0.0,18.0,4.62,11.62,66.04,Overburden Laterite
+DH-SP-009,18.0,35.0,38.24,6.19,24.53,Manganese Ore Horizon (Braunite)
+DH-SP-009,35.0,97.8,6.16,4.17,58.6,Footwall Quartzite
+DH-SP-010,0.0,18.0,2.45,9.35,67.97,Overburden Laterite
+DH-SP-010,18.0,35.0,28.17,5.82,15.02,Manganese Ore Horizon (Braunite)
+DH-SP-010,35.0,119.7,4.87,6.91,56.98,Footwall Quartzite
+DH-ER-001,0.0,15.0,5.7,10.1,60.34,Surface Colluvium
+DH-ER-001,15.0,32.0,38.35,7.27,21.12,Manganese Ore Horizon (Gondite Series)
+DH-ER-001,32.0,107.8,5.47,7.85,40.6,Footwall Quartz-Mica Schist
+DH-ER-002,0.0,15.0,2.09,7.53,61.78,Surface Colluvium
+DH-ER-002,15.0,32.0,39.63,7.46,17.46,Manganese Ore Horizon (Gondite Series)
+DH-ER-002,32.0,101.7,6.4,8.75,42.51,Footwall Quartz-Mica Schist
+DH-ER-003,0.0,15.0,5.44,10.25,50.6,Surface Colluvium
+DH-ER-003,15.0,32.0,31.09,4.65,17.35,Manganese Ore Horizon (Gondite Series)
+DH-ER-003,32.0,96.2,6.04,7.13,44.02,Footwall Quartz-Mica Schist
+DH-ER-004,0.0,15.0,3.2,9.12,57.35,Surface Colluvium
+DH-ER-004,15.0,32.0,33.29,4.89,22.19,Manganese Ore Horizon (Gondite Series)
+DH-ER-004,32.0,93.2,7.98,6.32,45.72,Footwall Quartz-Mica Schist
+DH-ER-005,0.0,15.0,5.62,9.24,58.11,Surface Colluvium
+DH-ER-005,15.0,32.0,37.76,7.36,21.95,Manganese Ore Horizon (Gondite Series)
+DH-ER-005,32.0,117.4,4.16,6.33,47.06,Footwall Quartz-Mica Schist
+DH-ER-006,0.0,15.0,4.93,10.96,54.91,Surface Colluvium
+DH-ER-006,15.0,32.0,40.5,6.8,17.62,Manganese Ore Horizon (Gondite Series)
+DH-ER-006,32.0,147.8,6.94,5.42,51.84,Footwall Quartz-Mica Schist
+DH-ER-007,0.0,15.0,4.57,7.84,50.55,Surface Colluvium
+DH-ER-007,15.0,32.0,35.2,6.21,22.77,Manganese Ore Horizon (Gondite Series)
+DH-ER-007,32.0,135.9,7.71,7.12,51.31,Footwall Quartz-Mica Schist
+DH-ER-008,0.0,15.0,3.48,9.54,50.33,Surface Colluvium
+DH-ER-008,15.0,32.0,38.67,7.01,17.99,Manganese Ore Horizon (Gondite Series)
+DH-ER-008,32.0,104.3,5.79,8.41,51.63,Footwall Quartz-Mica Schist
+DH-ER-009,0.0,15.0,4.25,7.65,55.58,Surface Colluvium
+DH-ER-009,15.0,32.0,40.8,6.56,23.86,Manganese Ore Horizon (Gondite Series)
+DH-ER-009,32.0,137.5,7.07,8.77,43.24,Footwall Quartz-Mica Schist
+DH-ER-010,0.0,15.0,3.88,8.39,65.52,Surface Colluvium
+DH-ER-010,15.0,32.0,40.25,4.57,20.1,Manganese Ore Horizon (Gondite Series)
+DH-ER-010,32.0,137.0,5.47,6.66,52.48,Footwall Quartz-Mica Schist
+DH-ER-011,0.0,15.0,4.65,9.69,54.54,Surface Colluvium
+DH-ER-011,15.0,32.0,33.9,7.0,21.62,Manganese Ore Horizon (Gondite Series)
+DH-ER-011,32.0,102.6,5.32,7.14,40.93,Footwall Quartz-Mica Schist
+DH-ER-012,0.0,15.0,5.37,9.87,66.99,Surface Colluvium
+DH-ER-012,15.0,32.0,38.32,7.32,19.55,Manganese Ore Horizon (Gondite Series)
+DH-ER-012,32.0,96.0,6.4,8.91,49.63,Footwall Quartz-Mica Schist
+DH-DW-001,0.0,22.0,4.35,8.34,66.41,Alluvial Silt & Sand
+DH-DW-001,22.0,40.0,36.4,5.77,24.01,Manganese Ore Horizon (Braunite)
+DH-DW-001,40.0,182.4,4.78,7.56,54.15,Footwall Dolomite
+DH-DW-002,0.0,22.0,2.21,7.06,69.2,Alluvial Silt & Sand
+DH-DW-002,22.0,40.0,29.43,6.96,27.29,Manganese Ore Horizon (Braunite)
+DH-DW-002,40.0,159.7,4.52,6.56,54.13,Footwall Dolomite
+DH-DW-003,0.0,22.0,4.29,6.91,55.42,Alluvial Silt & Sand
+DH-DW-003,22.0,40.0,30.03,5.92,24.52,Manganese Ore Horizon (Braunite)
+DH-DW-003,40.0,183.2,6.48,5.18,58.73,Footwall Dolomite
+DH-DW-004,0.0,22.0,3.17,7.77,56.12,Alluvial Silt & Sand
+DH-DW-004,22.0,40.0,30.22,7.79,26.98,Manganese Ore Horizon (Braunite)
+DH-DW-004,40.0,163.4,5.36,6.69,56.05,Footwall Dolomite
+DH-DW-005,0.0,22.0,4.35,8.44,56.88,Alluvial Silt & Sand
+DH-DW-005,22.0,40.0,32.59,6.06,22.12,Manganese Ore Horizon (Braunite)
+DH-DW-005,40.0,145.2,5.88,8.5,51.25,Footwall Dolomite
+DH-DW-006,0.0,22.0,2.35,7.7,58.18,Alluvial Silt & Sand
+DH-DW-006,22.0,40.0,34.12,6.92,20.21,Manganese Ore Horizon (Braunite)
+DH-DW-006,40.0,179.9,5.12,8.41,53.08,Footwall Dolomite
+DH-DW-007,0.0,22.0,2.85,9.81,55.42,Alluvial Silt & Sand
+DH-DW-007,22.0,40.0,29.96,8.19,19.3,Manganese Ore Horizon (Braunite)
+DH-DW-007,40.0,182.1,4.73,6.21,54.25,Footwall Dolomite
+DH-DW-008,0.0,22.0,3.96,6.82,70.86,Alluvial Silt & Sand
+DH-DW-008,22.0,40.0,28.78,5.95,17.08,Manganese Ore Horizon (Braunite)
+DH-DW-008,40.0,181.6,6.04,5.46,44.78,Footwall Dolomite
+DH-DW-009,0.0,22.0,4.41,9.05,59.46,Alluvial Silt & Sand
+DH-DW-009,22.0,40.0,28.58,8.4,16.1,Manganese Ore Horizon (Braunite)
+DH-DW-009,40.0,158.3,7.46,5.8,60.95,Footwall Dolomite
+DH-DW-010,0.0,22.0,3.68,7.27,64.42,Alluvial Silt & Sand
+DH-DW-010,22.0,40.0,33.67,5.63,16.13,Manganese Ore Horizon (Braunite)
+DH-DW-010,40.0,166.6,5.56,5.53,55.29,Footwall Dolomite

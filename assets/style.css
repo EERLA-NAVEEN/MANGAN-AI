@@ -1,0 +1,206 @@
+/* MANGAN-AI Professional Mining Intelligence Styling */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Base Container Spacing */
+.block-container {
+    padding-top: 1.8rem;
+    padding-bottom: 2.5rem;
+    max-width: 96%;
+}
+
+/* Header Branding */
+.brand-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1.2rem;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
+}
+
+.brand-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #F8FAFC !important;
+    margin: 0;
+}
+
+.brand-subtitle {
+    font-size: 0.82rem;
+    color: #CBD5E1 !important;
+    margin-top: 2px;
+}
+
+/* Mandatory Compliance Disclaimer Banner */
+.disclaimer-banner {
+    background: #141B2D;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 4px solid #F59E0B;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 1.2rem;
+    font-size: 0.83rem;
+    line-height: 1.45;
+    color: #E2E8F0;
+}
+
+.disclaimer-banner strong {
+    color: #FBBF24;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* Professional Metric Cards */
+.kpi-card {
+    background: #151D2F;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.kpi-card:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.kpi-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #94A3B8;
+    margin-bottom: 4px;
+}
+
+.kpi-value {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #F8FAFC;
+    line-height: 1.1;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.kpi-sub {
+    font-size: 0.78rem;
+    color: #64748B;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Badges & Pills */
+.badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 9999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.badge-critical {
+    background: rgba(239, 68, 68, 0.18);
+    color: #F87171;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.badge-high {
+    background: rgba(245, 158, 11, 0.18);
+    color: #FBBF24;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.badge-medium {
+    background: rgba(59, 130, 246, 0.18);
+    color: #60A5FA;
+    border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.badge-low {
+    background: rgba(16, 185, 129, 0.18);
+    color: #34D399;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+/* Recommendation Card */
+.rec-box {
+    background: #141B2D;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #6366F1;
+}
+
+.rec-box.priority-Critical {
+    border-left-color: #EF4444;
+}
+.rec-box.priority-High {
+    border-left-color: #F59E0B;
+}
+.rec-box.priority-Medium {
+    border-left-color: #3B82F6;
+}
+
+.rec-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.rec-title {
+    font-size: 1.0rem;
+    font-weight: 700;
+    color: #F1F5F9;
+}
+
+.rec-meta {
+    font-size: 0.78rem;
+    color: #94A3B8;
+    margin-bottom: 10px;
+}
+
+.rec-action {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.88rem;
+    color: #E2E8F0;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.rec-reason {
+    font-size: 0.82rem;
+    color: #94A3B8;
+    line-height: 1.4;
+}
+
+/* Synthetic Tag */
+.synthetic-tag {
+    background: rgba(99, 102, 241, 0.25);
+    color: #C7D2FE;
+    border: 1px solid rgba(99, 102, 241, 0.5);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.70rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+}

@@ -1,0 +1,65 @@
+# MANGAN-AI Configuration & Decision Thresholds
+# Smart India Hackathon 2026 Prototype (Problem Statement SIH26009)
+
+project:
+  name: "MANGAN-AI"
+  title: "Reserve-to-Production Intelligence"
+  problem_statement: "SIH26009 - Using AI/ML and Space Technology to Prioritize Manganese Exploration and Overcome Production Shortfalls"
+  version: "1.1.0-prototype"
+  disclaimer: >-
+    Exploration-favorability results are prioritized targets and not certified mineral reserves.
+    Confirmatory drilling and geological validation are required.
+    Recommendations are candidate actions for human review and are not autonomous mine-control instructions.
+
+production_risk:
+  shortfall_thresholds:
+    low: 10.0        # < 10% shortfall
+    medium: 20.0     # 10% - 20%
+    high: 35.0       # 20% - 35%
+    critical: 100.0  # > 35%
+  baseline_realization_rate: 0.955
+  default_scenario:
+    mine_id: "Mine A"
+    section: "North Block"
+    forecast_horizon_days: 7
+    planned_tonnes: 10000.0
+
+equipment:
+  warning_availability_pct: 75.0
+  critical_availability_pct: 65.0
+  high_downtime_hours_per_day: 6.0
+  critical_machines: ["EX-01", "EX-02", "DT-101", "DT-102", "DR-01"]
+
+blasting:
+  warning_delay_hours: 2.0
+  critical_delay_hours: 4.0
+
+environment:
+  high_rainfall_mm: 30.0
+  high_soil_moisture: 0.35
+  extreme_heat_c: 42.0
+  satellite_cloud_discount_threshold: 0.50
+
+exploration:
+  grid_resolution_m: 120.0  # Spatial grid sampling distance in meters
+  cutoffs:
+    high_priority_favorability: 0.65
+    medium_priority_favorability: 0.40
+  confidence_distance:
+    near_m: 120.0     # High geological confidence within 120m of borehole
+    moderate_m: 280.0 # Moderate confidence between 120m and 280m
+    far_m: 500.0      # Low confidence / step-out target beyond 280m
+  weights:
+    lithology: 0.40
+    assay_proximity: 0.35
+    surface_terrain: 0.25
+  target_elements:
+    mn_grade_economic_cutoff: 28.0 # % Mn economic cutoff
+
+data_quality:
+  minimum_acceptable_score: 80.0
+  weights:
+    completeness: 0.40
+    validity: 0.30
+    consistency: 0.15
+    satellite_clarity: 0.15
