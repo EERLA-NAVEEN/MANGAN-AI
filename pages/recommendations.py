@@ -1,6 +1,6 @@
 """
 MANGAN-AI — Recommendations & Decision Support
-Candidate Actions Generated via Configurable Rule Engine with Human-in-the-Loop Approval (SIH26009)
+Candidate Actions Generated via Configurable Rule Engine with Human-in-the-Loop Approval
 """
 
 import streamlit as st
@@ -16,30 +16,32 @@ from src.app_state import (
 from src.recommendations import RecommendationManager
 
 def render_recommendations_page():
-    # Header Branding
+    # Top Product Header
     st.markdown("""
-        <div class="brand-header">
+        <div class="product-header-container">
             <div>
-                <h1 class="brand-title">📋 Candidate Corrective Recommendations & Decision Support</h1>
-                <div class="brand-subtitle">Rule-Engine Generated Interventions Requiring Mandatory Supervisory Sign-Off</div>
+                <div class="product-eyebrow">MANGAN-AI · Reserve-to-Production Intelligence</div>
+                <h1 class="product-page-title">Recommendations</h1>
+                <p class="product-page-desc">Rule-engine generated candidate corrective actions requiring mandatory human supervisory review and authorization.</p>
             </div>
             <div>
-                <span class="synthetic-tag">HUMAN-IN-THE-LOOP</span>
+                <span class="synthetic-pill">HUMAN-IN-THE-LOOP</span>
             </div>
         </div>
     """, unsafe_allow_html=True)
 
-    # Mandatory Legal & Technical Disclaimers
+    # Human Decision-Support Mandate Disclaimer
     st.markdown("""
-        <div class="disclaimer-banner">
-            <strong>HUMAN DECISION-SUPPORT MANDATE</strong>
-            • Recommendations are candidate actions for human supervisory review and are not autonomous mine-control instructions.<br>
-            • Operational fleet adjustments, dewatering actions, and exploration drilling programs require sign-off by designated mine authorities.
+        <div class="transparency-banner">
+            <strong>Human Decision-Support Governance Mandate:</strong>
+            Recommendations are candidate actions for human supervisory review and are NOT autonomous mine-control instructions.
+            Fleet adjustments, dewatering protocols, and exploration drilling programs require sign-off by designated mine authorities.
         </div>
     """, unsafe_allow_html=True)
 
     # Top Concession Selector
-    c_col1, c_col2 = st.columns([2, 2])
+    st.markdown('<div class="section-header" style="margin-top:0.4rem;">Concession Scope Selection</div>', unsafe_allow_html=True)
+    c_col1, c_col2 = st.columns(2)
     with c_col1:
         mine_id = st.selectbox("Mine Concession", ["Mine A", "Mine B"], index=0, key="rec_mine")
     with c_col2:
@@ -48,14 +50,14 @@ def render_recommendations_page():
 
     scope_key = RecommendationManager.get_scope_key(mine_id, section)
 
-    # Load State & Recommendations
+    # Load Scoped Recommendations & State
     prod_data = run_production_forecast(mine_id, section, 7, 10000.0)
     quality_audit = run_data_quality_audit(mine_id, section)
     recommendations = get_or_create_recommendations(mine_id, section, prod_data, quality_audit)
     stats = RecommendationManager.get_summary_stats(recommendations)
 
     # Status KPI Cards
-    st.markdown(f"### Decision Support Status Register ({mine_id} — {section})")
+    st.markdown(f'<div class="section-header">Decision Status Register ({mine_id} — {section})</div>', unsafe_allow_html=True)
     s_col1, s_col2, s_col3, s_col4, s_col5 = st.columns(5)
 
     with s_col1:
@@ -71,7 +73,7 @@ def render_recommendations_page():
         st.markdown(f"""
             <div class="kpi-card" style="border-left: 3px solid #F59E0B;">
                 <div class="kpi-label">Pending Human Review</div>
-                <div class="kpi-value" style="color:#FCD34D;">{stats['pending']}</div>
+                <div class="kpi-value" style="color:#D97706;">{stats['pending']}</div>
                 <div class="kpi-sub">Action Required</div>
             </div>
         """, unsafe_allow_html=True)
@@ -80,7 +82,7 @@ def render_recommendations_page():
         st.markdown(f"""
             <div class="kpi-card" style="border-left: 3px solid #10B981;">
                 <div class="kpi-label">Approved Interventions</div>
-                <div class="kpi-value" style="color:#34D399;">{stats['approved']}</div>
+                <div class="kpi-value" style="color:#059669;">{stats['approved']}</div>
                 <div class="kpi-sub">Field Authorized</div>
             </div>
         """, unsafe_allow_html=True)
@@ -88,9 +90,9 @@ def render_recommendations_page():
     with s_col4:
         st.markdown(f"""
             <div class="kpi-card" style="border-left: 3px solid #3B82F6;">
-                <div class="kpi-label">Deferred / Need Info</div>
-                <div class="kpi-value" style="color:#60A5FA;">{stats['deferred']}</div>
-                <div class="kpi-sub">Under Review</div>
+                <div class="kpi-label">Deferred / Under Review</div>
+                <div class="kpi-value" style="color:#2563EB;">{stats['deferred']}</div>
+                <div class="kpi-sub">Awaiting More Telemetry</div>
             </div>
         """, unsafe_allow_html=True)
 
@@ -98,7 +100,7 @@ def render_recommendations_page():
         st.markdown(f"""
             <div class="kpi-card" style="border-left: 3px solid #EF4444;">
                 <div class="kpi-label">Rejected / Override</div>
-                <div class="kpi-value" style="color:#F87171;">{stats['rejected']}</div>
+                <div class="kpi-value" style="color:#DC2626;">{stats['rejected']}</div>
                 <div class="kpi-sub">Human Overridden</div>
             </div>
         """, unsafe_allow_html=True)
@@ -106,7 +108,7 @@ def render_recommendations_page():
     st.write("")
 
     # Interactive Filters
-    st.markdown("#### Filter Candidate Actions")
+    st.markdown('<div class="section-header">Filter Candidate Actions</div>', unsafe_allow_html=True)
     f_col1, f_col2, f_col3 = st.columns(3)
     
     with f_col1:
@@ -145,19 +147,21 @@ def render_recommendations_page():
         return
 
     # Render Candidate Recommendation Cards
-    st.markdown(f"### Candidate Interventions ({section})")
+    st.markdown(f'<div class="section-header">Candidate Interventions Requiring Sign-Off ({section})</div>', unsafe_allow_html=True)
 
     for rec in visible_recs:
         r_id = rec["recommendation_id"]
-        status_cls = "badge-high" if rec["status"] == "Pending Review" else ("badge-low" if rec["status"] == "Approved" else "badge-critical")
+        status_cls = "badge-high" if rec["status"] == "Pending Review" else ("badge-low" if rec["status"] == "Approved" else ("badge-medium" if rec["status"] == "Deferred" else "badge-critical"))
 
         with st.container():
             st.markdown(f"""
                 <div class="rec-box priority-{rec['priority']}">
                     <div class="rec-title-row">
-                        <div>
+                        <div style="display:flex; align-items:center; gap:8px;">
                             <span class="badge badge-{rec['priority'].lower()}">{rec['priority']} PRIORITY</span>
-                            <span style="font-size:0.75rem; color:#94A3B8; margin-left:8px; font-family:'JetBrains Mono', monospace;">ID: {rec['recommendation_id']} | Rule: {rec['rule_id']}</span>
+                            <span style="font-size:0.75rem; color:#64748B; font-family:'JetBrains Mono', monospace; font-weight:500;">
+                                ID: {rec['recommendation_id']} | Rule: {rec['rule_id']}
+                            </span>
                         </div>
                         <div>
                             <span class="badge {status_cls}">{rec['status']}</span>
@@ -165,15 +169,16 @@ def render_recommendations_page():
                     </div>
                     <div class="rec-title">{rec['title']}</div>
                     <div class="rec-meta">
-                        👤 <strong>Owner:</strong> {rec['owner']} &nbsp;|&nbsp; 
-                        🔒 <strong>Approval Required:</strong> Mandatory Human Authorization
+                        <span>👤 <strong>Owner:</strong> {rec['owner']}</span>
+                        <span>•</span>
+                        <span>🔒 <strong>Governance:</strong> Mandatory Supervisory Authorization</span>
                     </div>
                     <div class="rec-action">
-                        <strong>Proposed Action:</strong> {rec['action']}
+                        <strong style="color:#0F172A;">Proposed Action:</strong> {rec['action']}
                     </div>
                     <div class="rec-reason">
-                        <strong>Rationale:</strong> {rec['reason']}<br>
-                        <span style="color:#64748B;">📊 <strong>Supporting Metrics:</strong> {rec['supporting_metrics']}</span>
+                        <strong>Operational Rationale:</strong> {rec['reason']}<br>
+                        <span style="color:#64748B; font-size:0.78rem;">📊 <strong>Supporting Evidence:</strong> {rec['supporting_metrics']}</span>
                     </div>
                 </div>
             """, unsafe_allow_html=True)
@@ -213,8 +218,8 @@ def render_recommendations_page():
 
     # Decision Register Audit Trail Export
     st.markdown("---")
-    st.markdown(f"#### 📜 Decision Register & Audit Compliance Export ({section})")
-    st.caption("Maintains full auditability of all AI suggestions and human supervisory sign-offs.")
+    st.markdown(f'<div class="section-header">Decision Register & Audit Compliance Trail ({section})</div>', unsafe_allow_html=True)
+    st.caption("Maintains continuous auditability and traceability of all candidate interventions and supervisory sign-offs.")
 
     audit_records = []
     for r in recommendations:
@@ -227,7 +232,7 @@ def render_recommendations_page():
             "Title": r["title"],
             "Proposed Action": r["action"],
             "Designated Owner": r["owner"],
-            "Human Approval Status": r["status"],
+            "Approval Status": r["status"],
             "Auditor Notes": r.get("decision_notes", "N/A"),
             "Logged Timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         })
@@ -237,7 +242,7 @@ def render_recommendations_page():
 
     csv_audit = audit_df.to_csv(index=False)
     st.download_button(
-        "📥 Download Signed Decision Register (CSV)",
+        "📥 Export Decision Register (CSV)",
         data=csv_audit,
         file_name=f"mangan_ai_decision_register_{mine_id}_{section}.csv",
         mime="text/csv"

@@ -1,149 +1,432 @@
-/* MANGAN-AI Professional Mining Intelligence Styling */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+/* MANGAN-AI — Industrial Mining Intelligence Design System */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
-html, body, [class*="css"] {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+/* --- Global Theme & Base Settings --- */
+:root {
+    --bg-main: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --bg-subtle: #F1F5F9;
+    --border-subtle: #E2E8F0;
+    --border-hover: #CBD5E1;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+    
+    --brand-primary: #0F766E;
+    --brand-emerald: #059669;
+    --brand-tint: #ECFDF5;
+    --brand-border: #A7F3D0;
+    
+    --status-risk-critical: #EF4444;
+    --status-risk-high: #F59E0B;
+    --status-risk-med: #3B82F6;
+    --status-risk-low: #10B981;
 }
 
-/* Base Container Spacing */
+html, body, [class*="st-"], [class*="css-"] {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--text-primary);
+}
+
+/* Background canvas */
+.stApp {
+    background-color: var(--bg-main) !important;
+}
+
+/* Streamlit Header & Chrome Clean-up */
+header[data-testid="stHeader"], [data-testid="stHeader"] {
+    display: none !important;
+}
+#MainMenu, footer, .stDeployButton, [data-testid="stDeployButton"], [data-testid="stAppDeployButton"] {
+    display: none !important;
+    visibility: hidden !important;
+}
+.viewerBadge_container__1QSob {
+    display: none !important;
+}
+
+/* Hide Streamlit markdown header anchor links */
+.stMarkdown a.anchor-link, 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    display: none !important;
+}
+
+/* Container Spacing */
 .block-container {
-    padding-top: 1.8rem;
-    padding-bottom: 2.5rem;
-    max-width: 96%;
+    padding-top: 1.5rem !important;
+    padding-bottom: 2.5rem !important;
+    max-width: 95% !important;
 }
 
-/* Header Branding */
-.brand-header {
+/* --- Sidebar System --- */
+section[data-testid="stSidebar"] {
+    background-color: #FFFFFF !important;
+    border-right: 1px solid var(--border-subtle) !important;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.02) !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stSidebarContent"] {
+    display: flex !important;
+    flex-direction: column !important;
+    padding-top: 1.0rem !important;
+    padding-left: 1.1rem !important;
+    padding-right: 1.1rem !important;
+    height: 100% !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stSidebarHeader"] {
+    order: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin-bottom: 0.8rem !important;
+    min-height: 48px !important;
+}
+
+/* Streamlit Native Logo in Sidebar Header */
+[data-testid="stLogo"] {
+    height: 2.7rem !important;
+    max-width: 100% !important;
+}
+
+/* Hide collapse button completely to prevent unstyled text artifact */
+button[data-testid="stSidebarCollapseButton"], 
+[data-testid="stSidebarCollapseButton"] {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Hide fallback markdown brand box so st.logo takes top position cleanly */
+.sidebar-brand-box {
+    display: none !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] {
+    margin-bottom: auto !important;
+}
+
+section[data-testid="stSidebar"] ul[data-testid="stSidebarNavItems"] {
+    gap: 4px;
+}
+
+section[data-testid="stSidebar"] ul[data-testid="stSidebarNavItems"] li a {
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #334155 !important;
+    transition: all 0.15s ease;
+}
+
+section[data-testid="stSidebar"] ul[data-testid="stSidebarNavItems"] li a:hover {
+    background-color: var(--bg-subtle) !important;
+    color: #0F172A !important;
+}
+
+section[data-testid="stSidebar"] ul[data-testid="stSidebarNavItems"] li a[aria-current="page"] {
+    background-color: #ECFDF5 !important;
+    color: #047857 !important;
+    font-weight: 700 !important;
+    border-left: 3px solid #059669;
+}
+
+/* Compact Sidebar Transparency Card anchored at bottom */
+.sidebar-disclosure-card {
+    order: 3 !important;
+    background: #F8FAFC;
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.sidebar-disclosure-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #475569;
+    margin-bottom: 3px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0.8rem 1.2rem;
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    margin-bottom: 1.2rem;
+    gap: 5px;
 }
 
-.brand-title {
-    font-size: 1.4rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    color: #F8FAFC !important;
+.sidebar-disclosure-text {
+    font-size: 0.73rem;
+    color: #64748B;
+    line-height: 1.4;
     margin: 0;
 }
 
-.brand-subtitle {
-    font-size: 0.82rem;
-    color: #CBD5E1 !important;
-    margin-top: 2px;
-}
-
-/* Mandatory Compliance Disclaimer Banner */
-.disclaimer-banner {
-    background: #141B2D;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-left: 4px solid #F59E0B;
-    border-radius: 6px;
-    padding: 10px 14px;
+/* --- Top Product Header --- */
+.product-header-container {
+    background: #FFFFFF;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 1rem 1.4rem;
     margin-bottom: 1.2rem;
-    font-size: 0.83rem;
-    line-height: 1.45;
-    color: #E2E8F0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
 }
 
-.disclaimer-banner strong {
-    color: #FBBF24;
-    text-transform: uppercase;
+.product-eyebrow {
     font-size: 0.75rem;
-    letter-spacing: 0.05em;
-    display: block;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #059669;
     margin-bottom: 2px;
 }
 
-/* Professional Metric Cards */
+.product-page-title {
+    font-size: 1.65rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: #0F172A;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.product-page-desc {
+    font-size: 0.86rem;
+    color: #475569;
+    margin-top: 4px;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+/* Synthetic Tag Pill */
+.synthetic-pill {
+    background: #F1F5F9;
+    color: #475569;
+    border: 1px solid #CBD5E1;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* --- Disclaimers & Status Banners --- */
+.transparency-banner {
+    background: #F8FAFC;
+    border: 1px solid var(--border-subtle);
+    border-left: 4px solid #0EA5E9;
+    border-radius: 8px;
+    padding: 9px 14px;
+    margin-bottom: 1.1rem;
+    font-size: 0.81rem;
+    line-height: 1.45;
+    color: #334155;
+}
+
+.transparency-banner strong {
+    color: #0369A1;
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+/* Operational Risk Status Banner */
+.risk-banner {
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.risk-banner.risk-critical, .risk-banner.risk-high {
+    background: #FEF2F2;
+    border: 1px solid #FECACA;
+    border-left: 4px solid #EF4444;
+}
+
+.risk-banner.risk-critical .risk-title, .risk-banner.risk-high .risk-title {
+    color: #991B1B;
+    font-weight: 800;
+    font-size: 0.84rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.risk-banner.risk-critical .risk-text, .risk-banner.risk-high .risk-text {
+    color: #7F1D1D;
+    font-size: 0.84rem;
+    margin: 0;
+}
+
+.risk-banner.risk-medium {
+    background: #FFFBEB;
+    border: 1px solid #FDE68A;
+    border-left: 4px solid #F59E0B;
+}
+
+.risk-banner.risk-medium .risk-title {
+    color: #92400E;
+    font-weight: 800;
+    font-size: 0.84rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.risk-banner.risk-medium .risk-text {
+    color: #78350F;
+    font-size: 0.84rem;
+    margin: 0;
+}
+
+.risk-banner.risk-low {
+    background: #ECFDF5;
+    border: 1px solid #A7F3D0;
+    border-left: 4px solid #10B981;
+}
+
+.risk-banner.risk-low .risk-title {
+    color: #065F46;
+    font-weight: 800;
+    font-size: 0.84rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.risk-banner.risk-low .risk-text {
+    color: #047857;
+    font-size: 0.84rem;
+    margin: 0;
+}
+
+/* --- Enterprise Card System --- */
+.content-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.content-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.content-card-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1E293B;
+    margin: 0;
+}
+
+/* KPI Card Specification */
 .kpi-card {
-    background: #151D2F;
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
     border-radius: 10px;
     padding: 14px 16px;
     margin-bottom: 0.8rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    transition: transform 0.15s ease, border-color 0.15s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    min-width: 140px;
 }
 
 .kpi-card:hover {
-    border-color: rgba(255, 255, 255, 0.18);
+    border-color: var(--border-hover);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .kpi-label {
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: 0.72rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: #94A3B8;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
     margin-bottom: 4px;
 }
 
 .kpi-value {
-    font-size: 1.7rem;
+    font-size: 1.85rem;
     font-weight: 800;
-    color: #F8FAFC;
-    line-height: 1.1;
+    color: var(--text-primary);
+    line-height: 1.15;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    white-space: nowrap;
 }
 
 .kpi-sub {
-    font-size: 0.78rem;
-    color: #64748B;
+    font-size: 0.76rem;
+    color: var(--text-secondary);
     margin-top: 6px;
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
-/* Badges & Pills */
+/* Semantic Badges */
 .badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     padding: 3px 8px;
-    border-radius: 9999px;
+    border-radius: 6px;
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .badge-critical {
-    background: rgba(239, 68, 68, 0.18);
-    color: #F87171;
-    border: 1px solid rgba(239, 68, 68, 0.4);
+    background: #FEF2F2;
+    color: #DC2626;
+    border: 1px solid #FECACA;
 }
 
 .badge-high {
-    background: rgba(245, 158, 11, 0.18);
-    color: #FBBF24;
-    border: 1px solid rgba(245, 158, 11, 0.4);
+    background: #FFFBEB;
+    color: #D97706;
+    border: 1px solid #FDE68A;
 }
 
 .badge-medium {
-    background: rgba(59, 130, 246, 0.18);
-    color: #60A5FA;
-    border: 1px solid rgba(59, 130, 246, 0.4);
+    background: #EFF6FF;
+    color: #2563EB;
+    border: 1px solid #BFDBFE;
 }
 
 .badge-low {
-    background: rgba(16, 185, 129, 0.18);
-    color: #34D399;
-    border: 1px solid rgba(16, 185, 129, 0.4);
+    background: #ECFDF5;
+    color: #059669;
+    border: 1px solid #A7F3D0;
 }
 
-/* Recommendation Card */
+.badge-neutral {
+    background: #F1F5F9;
+    color: #475569;
+    border: 1px solid #CBD5E1;
+}
+
+/* --- Recommendations & Actions System --- */
 .rec-box {
-    background: #141B2D;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #FFFFFF;
+    border: 1px solid var(--border-subtle);
     border-radius: 10px;
-    padding: 16px;
-    margin-bottom: 1rem;
-    border-left: 4px solid #6366F1;
+    padding: 16px 18px;
+    margin-bottom: 0.85rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    border-left: 4px solid #64748B;
 }
 
 .rec-box.priority-Critical {
@@ -155,52 +438,98 @@ html, body, [class*="css"] {
 .rec-box.priority-Medium {
     border-left-color: #3B82F6;
 }
+.rec-box.priority-Low {
+    border-left-color: #10B981;
+}
 
 .rec-title-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .rec-title {
     font-size: 1.0rem;
     font-weight: 700;
-    color: #F1F5F9;
+    color: #0F172A;
+    margin-bottom: 4px;
 }
 
 .rec-meta {
-    font-size: 0.78rem;
-    color: #94A3B8;
+    font-size: 0.77rem;
+    color: #64748B;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .rec-action {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: #F8FAFC;
+    border: 1px solid var(--border-subtle);
     border-radius: 6px;
-    padding: 10px;
-    font-size: 0.88rem;
-    color: #E2E8F0;
+    padding: 10px 12px;
+    font-size: 0.86rem;
+    color: #1E293B;
     margin-bottom: 8px;
-    font-weight: 500;
+    line-height: 1.45;
 }
 
 .rec-reason {
-    font-size: 0.82rem;
-    color: #94A3B8;
-    line-height: 1.4;
+    font-size: 0.80rem;
+    color: #475569;
+    line-height: 1.45;
 }
 
-/* Synthetic Tag */
-.synthetic-tag {
-    background: rgba(99, 102, 241, 0.25);
-    color: #C7D2FE;
-    border: 1px solid rgba(99, 102, 241, 0.5);
-    padding: 3px 8px;
-    border-radius: 4px;
-    font-size: 0.70rem;
+/* Section Subheaders */
+.section-header {
+    font-size: 1.1rem;
     font-weight: 700;
-    text-transform: uppercase;
-    white-space: nowrap;
+    color: #1E293B;
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.01em;
+}
+
+/* Controls & Inputs Enhancement */
+div[data-testid="stSelectbox"] label,
+div[data-testid="stMultiSelect"] label,
+div[data-testid="stNumberInput"] label,
+div[data-testid="stTextInput"] label {
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    color: #475569 !important;
+    margin-bottom: 2px !important;
+}
+
+/* MultiSelect Tag Restyling */
+div[data-testid="stMultiSelect"] span[data-baseweb="tag"],
+[data-baseweb="tag"] {
+    background-color: #F1F5F9 !important;
+    border: 1px solid #CBD5E1 !important;
+}
+
+div[data-testid="stMultiSelect"] span[data-baseweb="tag"] span,
+[data-baseweb="tag"] span {
+    color: #1E293B !important;
+    font-weight: 600 !important;
+}
+
+/* Streamlit Button Tweaks */
+button[data-testid="baseButton-secondary"] {
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    font-size: 0.82rem !important;
+    transition: all 0.15s ease !important;
+}
+
+/* Folium Map Container */
+.map-hero-wrapper {
+    background: #FFFFFF;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    margin-bottom: 1.2rem;
 }
